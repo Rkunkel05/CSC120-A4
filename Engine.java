@@ -1,9 +1,8 @@
-import FuelType.FuelType;
-
 // Make engine
 public class Engine {
     // Define variables
-    private int maxFuel = 100;
+    // Private because it doesn't need to be altered 
+    private double maxFuel = 100;
     private String FuelType;
     public Engine(String FuelType, int maxFuel) {
         this.FuelType = FuelType;
@@ -11,20 +10,18 @@ public class Engine {
     }
 
     // Checks if fuel > 0, train goes. If 0, train can't go
-    int Fuel = maxFuel;
-    public boolean go(int Fuel) {
-        if (Fuel > 0) {
-            Fuel = Fuel - 100;
+    public boolean go(int fuel) {
+        if (fuel > 0) {
+            fuel = fuel - 10;
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 
     // Prints the amount of fuel
-    public void fuelAmt(int Fuel, int startingFuel) {
-        System.out.println(startingFuel);
+    public void fuelAmt(int Fuel) {
+        System.out.println(Fuel);
     }
 
     // FUEL:
@@ -37,13 +34,13 @@ public class Engine {
     // CONSTRUCTOR:
     // Defines variables (:
 
-public static void main(String[] args) {
-    Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
-        int maxFuel = 100;
-        while (myEngine.go(maxFuel)) {
+    public static void main(String[] args) {
+        import CSC120.FuelType;
+        Engine myEngine = new Engine(FuelType.ELECTRIC,100.0);
+        while (myEngine.go()) {
             System.out.println("Choo choo!");
         }
-        System.out.println("Out of fuel."); 
+        System.out.println("Out of fuel.");
     }
 }
 
