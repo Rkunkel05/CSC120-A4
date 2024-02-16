@@ -1,4 +1,4 @@
-import FuelType;
+import FuelType.FuelType;
 
 // Make engine
 public class Engine {
@@ -12,10 +12,10 @@ public class Engine {
 
     // Checks if fuel > 0, train goes. If 0, train can't go
     int Fuel = maxFuel;
-    public boolean go(int startingFuel) {
-        if (startingFuel > 0) {
-            return true;
+    public boolean go(int Fuel) {
+        if (Fuel > 0) {
             Fuel = Fuel - 100;
+            return true;
         }
         else {
             return false;
@@ -40,7 +40,7 @@ public class Engine {
 public static void main(String[] args) {
     Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
         int maxFuel = 100;
-        while (myEngine.go(startingFuel)) {
+        while (myEngine.go(maxFuel)) {
             System.out.println("Choo choo!");
         }
         System.out.println("Out of fuel."); 
