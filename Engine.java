@@ -35,9 +35,8 @@ public class Engine {
     // Defines variables (:
 
     public static void main(String[] args) {
-        import CSC120.FuelType;
-        Engine myEngine = new Engine(FuelType.ELECTRIC,100.0);
-        while (myEngine.go()) {
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
+        while (myEngine.go(maxFuel)) {
             System.out.println("Choo choo!");
         }
         System.out.println("Out of fuel.");
