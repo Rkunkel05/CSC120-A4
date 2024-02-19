@@ -12,7 +12,7 @@
 
 // - and a final method `printManifest()` that prints out a list of all `Passenger`s aboard the car (or "This car is EMPTY." if there is no one on board).
 
-//As before, consider which of these should be `public` and which should be `private` (potentially with `accessor`s and/or `manipulator`s).
+// As before, consider which of these should be `public` and which should be `private` (potentially with `accessor`s and/or `manipulator`s).
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,20 +22,80 @@ public class Car {
     private List < String > onBoard = new ArrayList < > ();
     // Set the maximum capacity as 20
     public int maxCapacity = 20;
+    public int Capacity = maxCapacity;
 
-    // Creates 20 slots for passangers in the liist
-    for (int i : maxCapacity) {
-        onBoard.add(" ");
+    // Makes car?
+    public Car(List < String > onBoard, int maxCapacity) {
+        this.onBoard = onBoard;
+        this.maxCapacity = maxCapacity;
+        // Creates a certain amount of open spaces in the car
+        int i = 0;
+        while (i < maxCapacity) {
+            onBoard.add(" "); 
+            i += 1; }
     }
 
-    // Prints how many available spots there are
-    public class getCapacity {
-        // prints the maxCapacity
-        public void printMaxCapacity(int maxCapacity) {
-            System.out.println(maxCapacity); } 
+    // Adds a passenger to the list onBoard
+    public boolean addPassenger(Passenger p) {
+        if (onBoard < 20) { 
+            onBoard.add(Passenger p);
+            Capacity -= 1;
+            return true;
+        }
+        else {
+            System.out.println("There is no room!");
+            return false;
+        }
     }
-    public class seatsRemaining {
-        
+
+    public boolean removePassenger(Passenger p) {
+        if (onBoard > 0) {
+            onboard.remove(Passenger p);
+            Capacity += 1;
+            return true;
+        }
+        else {
+            System.out.println("There is no one on board!");
+            return false;
+        }
+    }
+
+    public void printManifest() {
+        public String passenger;
+        if onBoard > 0 {
+            for (passenger : onBoard); {
+                System.out.println(passenger);
+            }
+        }
+        else {
+            System.out.println("This car is EMPTY.");
+        }
+
+    }
+
+    // Returns the maximum capacity 
+    public int getCapacity() {
+        System.out.println(Capacity);
+        return Capacity;
+    }
+
+    // Returns how many seats are left
+    public int seatsRemaining() {
+        System.out.println(seatsRemaining);
+        return seatsRemaining;
+    }
+
+
+    public static void main(String[] args) {
+        Car myCar = new Car(<>, 20);
+        System.out.println("This car can hold", maxCapacity, "people");
+        System.out.println("Adding passengers...");
+        myCar.addPassenger("Sasha");
+        System.out.println("The current manifest is:");
+        myCar.printManifest();
+        System.out.println("Passenger leaving train...");
+        myCar.removePassenger("Sasha");
+        System.out.println("The current manifest is:");
+        myCar.printManifest();
     }
 }
-

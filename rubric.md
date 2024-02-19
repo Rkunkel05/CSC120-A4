@@ -14,15 +14,15 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 _____ 1 pt: All classes, methods, and attributes are named as requested in the assignment specifications
 
-_____ 1 pt: The `Engine` class contains appropriately-encapsulated attributes to store information about its fuel type, capacity, and current level
+**PART** 1 pt: The `Engine` class contains appropriately-encapsulated attributes to store information about its fuel type, capacity, and current level
 
-_____ 1 pt: The `Engine` class has a functional constructor
+**YES** 1 pt: The `Engine` class has a functional constructor
 
-_____ 1 pt: The `Engine` class has `refuel()` and `go()` methods that correctly modify the fuel level
+**YES** 1 pt: The `Engine` class has `refuel()` and `go()` methods that correctly modify the fuel level
 
 ### Level 2 (3 pts)
 
-_____ 1 pt: The `Car` class contains appropriately-encapsulated attributes to store information about its capacity and current `Passenger`s
+**PART** 1 pt: The `Car` class contains appropriately-encapsulated attributes to store information about its capacity and current `Passenger`s
 
 _____ 1 pt: The `Car` class has functional `addPassenger(...)` and `removePassenger(...)` methods
 
