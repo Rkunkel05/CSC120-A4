@@ -2,47 +2,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Car {
-    // Creates a list that stores the passangers
+    // Creates a list that stores the passengers
     private List<String> onBoard;
-    // Set the maximum capacity as 20
+    // Sets the maximum capacity as 20
     public int maxCapacity = 20;
-    public int Capacity = maxCapacity;
-    int size = onBoard.size();
 
-    // Makes car?
+    // Constructor
     public Car(List<String> onBoard, int maxCapacity) {
         this.onBoard = onBoard;
         this.maxCapacity = maxCapacity;
-        this.size = onBoard.size();
-        }
+    }
 
-    // Adds a passenger to the list onBoard
-    public boolean addPassenger(String Passenger) {
-        if (size < maxCapacity) { 
-            onBoard.add(Passenger);
-            Capacity -= 1;
-            return true;
-        }
+    // Adds a passenger to the list onBoard, otherwise prints error
+    public void addPassenger(String passenger) {
+        if (onBoard.size() < maxCapacity) { 
+            onBoard.add(passenger);
+        } 
         else {
             System.out.println("There is no room!");
-            return false;
         }
     }
 
-    public boolean removePassenger(String Passenger) {
-        if (size > 0) {
-            onBoard.remove(Passenger);
-            Capacity += 1;
+    // Checks if there is more than 0 passengers and if the select passenger is on board. Removes them or prints an error
+    public boolean removePassenger(String passenger) {
+        if (onBoard.size() > 0 || onBoard.contains(passenger)) {
+            onBoard.remove(passenger);
             return true;
-        }
-        else {
-            System.out.println("There is no one on board!");
+        } else {
+            System.out.println("Passenger not found or there is no one on board!");
             return false;
         }
     }
 
+    // Prints a list of all passengers on board or prints an error
     public void printManifest() {
-        if (size > 0) {
+        if (onBoard.size() > 0) {
             for (String passenger : onBoard) {
                 System.out.println(passenger);
             }
@@ -52,9 +46,9 @@ public class Car {
         }
     }
 
-    // Returns the maximum capacity 
+    // Returns the maximum amount of seats
     public void getCapacity() {
-        System.out.println("Maximum capacity: " + Capacity);
+        System.out.println("This car seats up to: " + (maxCapacity));
     }
 
     // Returns how many seats are left
