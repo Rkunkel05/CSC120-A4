@@ -14,7 +14,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 _____ 1 pt: All classes, methods, and attributes are named as requested in the assignment specifications
 
-**PART** 1 pt: The `Engine` class contains appropriately-encapsulated attributes to store information about its fuel type, capacity, and current level
+**YES** 1 pt: The `Engine` class contains appropriately-encapsulated attributes to store information about its fuel type, capacity, and current level
 
 **YES** 1 pt: The `Engine` class has a functional constructor
 
@@ -22,11 +22,11 @@ _____ 1 pt: All classes, methods, and attributes are named as requested in the a
 
 ### Level 2 (3 pts)
 
-**PART** 1 pt: The `Car` class contains appropriately-encapsulated attributes to store information about its capacity and current `Passenger`s
+**YES** 1 pt: The `Car` class contains appropriately-encapsulated attributes to store information about its capacity and current `Passenger`s
 
-_____ 1 pt: The `Car` class has functional `addPassenger(...)` and `removePassenger(...)` methods
+**YES** 1 pt: The `Car` class has functional `addPassenger(...)` and `removePassenger(...)` methods
 
-_____ 1 pt: The `Car` class has a `printManifest()` method that prints a nicely-formatted roster of all `Passenger`s currently aboard the car
+**YES** 1 pt: The `Car` class has a `printManifest()` method that prints a nicely-formatted roster of all `Passenger`s currently aboard the car
 
 ### Level 3 (3 pts)
 

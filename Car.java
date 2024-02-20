@@ -14,22 +14,22 @@ public class Car {
     }
 
     // Adds a passenger to the list onBoard, otherwise prints error
-    public void addPassenger(String passenger) {
+    public boolean addPassenger(String passenger) {
         if (onBoard.size() < maxCapacity) { 
-            onBoard.add(passenger);
-        } 
+                return true;
+            }
+        
         else {
-            System.out.println("There is no room!");
+            return false;
         }
     }
+    
 
     // Checks if there is more than 0 passengers and if the select passenger is on board. Removes them or prints an error
     public boolean removePassenger(String passenger) {
-        if (onBoard.size() > 0 || onBoard.contains(passenger)) {
-            onBoard.remove(passenger);
+        if (onBoard.size() > 0 || onBoard.contains(Passenger.name)) {
             return true;
         } else {
-            System.out.println("Passenger not found or there is no one on board!");
             return false;
         }
     }
@@ -46,12 +46,12 @@ public class Car {
         }
     }
 
-    // Returns the maximum amount of seats
+    // Prints the maximum amount of seats in the car
     public void getCapacity() {
         System.out.println("This car seats up to: " + (maxCapacity));
     }
 
-    // Returns how many seats are left
+    // Prints how many seats are left in the car
     public void seatsRemaining() {
         int remainingSeats = maxCapacity - onBoard.size();
         System.out.println("Seats remaining: " + remainingSeats);
@@ -59,18 +59,18 @@ public class Car {
 
 
     public static void main(String[] args) {
-        Car myCar = new Car(new ArrayList<>(), 20);
-        myCar.getCapacity(); // Call the method using parentheses
-        myCar.seatsRemaining(); // Call the method using parentheses
+        Car myCar1 = new Car(new ArrayList<>(), 20);
+        myCar1.getCapacity(); 
+        myCar1.seatsRemaining();
         System.out.println("Adding passengers...");
-        myCar.addPassenger("Sasha");
+        myCar1.addPassenger("Sasha");
         System.out.println("The current manifest is:");
-        myCar.printManifest();
-        myCar.seatsRemaining(); // Call the method using parentheses
+        myCar1.printManifest();
+        myCar1.seatsRemaining(); 
         System.out.println("Passenger leaving car...");
-        myCar.removePassenger("Sasha");
-        myCar.seatsRemaining(); // Call the method using parentheses
+        myCar1.removePassenger("Sasha");
+        myCar1.seatsRemaining();
         System.out.println("The current manifest is:");
-        myCar.printManifest();
+        myCar1.printManifest();
     }
 }
