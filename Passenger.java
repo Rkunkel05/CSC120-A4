@@ -1,17 +1,18 @@
 public class Passenger {
     
-    private String name;
+    public String name;
+    private Car car;
 
     // Constructor for Passenger
-    public Passenger(String name) {
+    public Passenger(String name, Car car) {
         this.name = name;
-        private Car car;
+        this.car = car;
     }
 
     // Checks if there is room in addPassenger class (true = room, false = no room)
     public void boardCar() {
-        if (Car.addPassenger() == true) {
-            onBoard.add(name);
+        if (car.addPassenger(name) == true) {
+            System.out.println(name + " has boarded the train");
         }
 
         else {
@@ -21,13 +22,12 @@ public class Passenger {
 
     // Checks if the car has more than 0 ppl and if the name is in the list. 
     public void getOffCar() {
-        if (Car.removePassenger() == true) {
-            onBoard.remove(name);
+        if (car.removePassenger(name) == true) {
+            System.out.println(name + " has left the train!");
         }
 
         else {
             System.out.println("Passenger not found or there is no one on board!");
         }
     }
-
 }

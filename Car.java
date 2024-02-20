@@ -16,6 +16,7 @@ public class Car {
     // Adds a passenger to the list onBoard, otherwise prints error
     public boolean addPassenger(String passenger) {
         if (onBoard.size() < maxCapacity) { 
+            onBoard.add(passenger);
                 return true;
             }
         
@@ -26,13 +27,15 @@ public class Car {
     
 
     // Checks if there is more than 0 passengers and if the select passenger is on board. Removes them or prints an error
-    public boolean removePassenger(String passenger) {
-        if (onBoard.size() > 0 || onBoard.contains(Passenger.name)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    public boolean removePassenger(String passengerName) {
+        for (String passenger : onBoard) {
+            if (passenger.equals(passengerName)) {
+                onBoard.remove(passenger);
+                return true;
+            }
+            }
+        return false;
+        } 
 
     // Prints a list of all passengers on board or prints an error
     public void printManifest() {
@@ -62,13 +65,9 @@ public class Car {
         Car myCar1 = new Car(new ArrayList<>(), 20);
         myCar1.getCapacity(); 
         myCar1.seatsRemaining();
-        System.out.println("Adding passengers...");
-        myCar1.addPassenger("Sasha");
         System.out.println("The current manifest is:");
         myCar1.printManifest();
         myCar1.seatsRemaining(); 
-        System.out.println("Passenger leaving car...");
-        myCar1.removePassenger("Sasha");
         myCar1.seatsRemaining();
         System.out.println("The current manifest is:");
         myCar1.printManifest();
