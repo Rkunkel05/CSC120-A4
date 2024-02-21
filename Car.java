@@ -25,7 +25,6 @@ public class Car {
         }
     }
     
-
     // Checks if there is more than 0 passengers and if the select passenger is on board. Removes them or prints an error
     public boolean removePassenger(String passengerName) {
         for (String passenger : onBoard) {
@@ -60,16 +59,21 @@ public class Car {
         System.out.println("Seats remaining: " + remainingSeats);
     }
 
-
     public static void main(String[] args) {
         Car myCar1 = new Car(new ArrayList<>(), 20);
         myCar1.getCapacity(); 
         myCar1.seatsRemaining();
+        System.out.println("Adding passengers...");
+        myCar1.addPassenger("Sasha");
+        myCar1.addPassenger("Paul");
         System.out.println("The current manifest is:");
         myCar1.printManifest();
         myCar1.seatsRemaining(); 
+        System.out.println("Removing passenger...");
+        myCar1.removePassenger("Sasha");
         myCar1.seatsRemaining();
         System.out.println("The current manifest is:");
         myCar1.printManifest();
+        myCar1.seatsRemaining();
     }
 }

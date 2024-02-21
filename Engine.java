@@ -29,7 +29,7 @@ public class Engine {
     public void Refuel() {
         currentFuel = maxFuel;
     }
-
+    
     public static void main(String[] args) {
         Engine myEngine = new Engine("ELECTRIC", 100); // Pass an int for maxFuel
 

@@ -12,7 +12,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ### Level 1 (4 pts)
 
-_____ 1 pt: All classes, methods, and attributes are named as requested in the assignment specifications
+**PART** 1 pt: All classes, methods, and attributes are named as requested in the assignment specifications
 
 **YES** 1 pt: The `Engine` class contains appropriately-encapsulated attributes to store information about its fuel type, capacity, and current level
 
@@ -40,9 +40,9 @@ _____ 1 pt: All classes, methods, and attributes are named as requested in the a
 
 ## General Items:
 
-**NO** 4 pts: Programs compile without errors or warnings
+**YES** 4 pts: Programs compile without errors or warnings
 
-**NO** 2 pts: Executes fully & consistently without crashing (exception/freeze)
+**YES** 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 **PART** 2 pt: Complies with style guidelines (missing items 1 pt each):
 
@@ -58,4 +58,4 @@ _____ 1 pt: All classes, methods, and attributes are named as requested in the a
 
 **YES** 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment
+**YES** 1 pt: `reflection.md` contains your reflection on the assignment
