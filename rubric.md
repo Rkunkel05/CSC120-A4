@@ -30,7 +30,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ### Level 3 (3 pts)
 
-**YES** 1 pt: The `Passenger` class uses appropriate methods from the `Car` class to implement its `boardCar(...)` and `getOffCar(...)` methods
+**PART** 1 pt: The `Passenger` class uses appropriate methods from the `Car` class to implement its `boardCar(...)` and `getOffCar(...)` methods
 
 **NO** 1 pt: The `Train` class has all expected attributes / relationships with the other classes
 

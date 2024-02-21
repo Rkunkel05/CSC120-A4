@@ -1,7 +1,5 @@
 // Make engine
 public class Engine {
-    // Define variables
-    // Private because it doesn't need to be altered 
     private double maxFuel = 100;
     private double currentFuel = maxFuel;
     private String fuelType;
@@ -11,7 +9,7 @@ public class Engine {
         this.maxFuel = maxFuel;
     }
 
-    // Checks if fuel > 0, train goes. If 0, train can't go
+    // If fuel > 0, the train goes. Else, print error.
     public boolean go() {
         if (currentFuel > 0) {
             currentFuel = currentFuel - 10;
@@ -26,10 +24,11 @@ public class Engine {
         System.out.println(currentFuel);
     }
 
+    // Resets fuel to max level
     public void Refuel() {
         currentFuel = maxFuel;
     }
-    
+
     public static void main(String[] args) {
         Engine myEngine = new Engine("ELECTRIC", 100); // Pass an int for maxFuel
 

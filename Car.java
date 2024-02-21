@@ -60,15 +60,20 @@ public class Car {
     }
 
     public static void main(String[] args) {
+        // Creates 1st car
         Car myCar1 = new Car(new ArrayList<>(), 20);
         myCar1.getCapacity(); 
         myCar1.seatsRemaining();
+
+        // Adds passengers
         System.out.println("Adding passengers...");
         myCar1.addPassenger("Sasha");
         myCar1.addPassenger("Paul");
         System.out.println("The current manifest is:");
         myCar1.printManifest();
         myCar1.seatsRemaining(); 
+
+        // Removes a passenger
         System.out.println("Removing passenger...");
         myCar1.removePassenger("Sasha");
         myCar1.seatsRemaining();

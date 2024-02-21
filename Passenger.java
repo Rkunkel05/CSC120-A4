@@ -22,7 +22,7 @@ public class Passenger {
         }
     }
 
-    // Checks if the car has more than 0 ppl and if the name is in the list. 
+    // Checks if the car has more than 0 passengers and if the name is in the list. 
     public void getOffCar() {
         if (car.removePassenger(name) == true) {
             System.out.println(name + " has left the train!");
