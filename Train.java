@@ -32,7 +32,7 @@ public class Train {
         if (i >= 0 && i < cars.size()) {
             return cars.get(i);
         } else {
-            return null; // Invalid index
+            return null; // Invalid 
         }
     }
 
